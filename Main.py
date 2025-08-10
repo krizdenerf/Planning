@@ -1,7 +1,11 @@
+
+import json
+
+
 from datetime import datetime
 
-date = datetime.now()
-today = date.strftime("%d/%m")
+datedujour = datetime.now()
+today = datedujour.strftime("%d/%m")
 
 #var date recup la date et l’heure
 #var today recup le format jour/mois
@@ -15,4 +19,11 @@ Aniki = {
     "13/08":"last day"
   }
 
-message = Aniki.get(today,"0 et big bang"
+message = Aniki.get(today,"0 et big bang")
+
+output = {
+    "date": today
+    "message": message
+}
+
+print(json.dumps(output,ensure_ascii=false))
